@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: download frontend build artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: frontend-build
           path: booster-app/src/main/resources/static
@@ -57,7 +57,7 @@ jobs:
       - name: create target folder
         run: mkdir booster-app/target
       - name: download moodBoost.jar
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: moodBoost.jar
           path: booster-app/target
